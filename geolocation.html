@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 Demos - Geolocation</title>
+    </head>
+    <body>
+        <header>
+            <h1>Geolocation Demo</h1>
+        </header>
+        <section>
+            <article>                
+                <button onclick="getLocation()">Get coordinates</button>
+                
+                <p id="demo"></p>
+                
+                <script>
+                var demo = document.getElementById("demo");
+                
+                function getLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    } else { 
+                        demo.innerHTML = "Geolocation is not supported by this browser.";
+                    }
+                }
+                
+                function showPosition(position) {
+                    demo.innerHTML = "Latitude: " + position.coords.latitude + 
+                    "<br>Longitude: " + position.coords.longitude;
+                }
+                </script>
+            </article>
+        </section>
+        <footer>
+            <details>
+                <summary>&copy; Copyright 2017</summary>
+                <p>T&amp;C content.</p>
+            </details>
+        </footer>
+    </body>
+</html>
