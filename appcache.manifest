@@ -1,5 +1,9 @@
 CACHE MANIFEST
 
+#
+# This is a sample
+#
+
 CACHE:
 # Defines resources to be cached.
 script/library.js
